@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{zigzag}[2021/02/08 Zigzag-Justify package]
+
+%% Author: Bikash Shrestha
+%% This project is done under the supervision of Dr. Badri Adhikari from University of Missouri St. Louis
+
+\RequirePackage{calc}
+\RequirePackage{pgf}
+
+\DeclareOption*{\PackageWarning{zigzag}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+\newlength{\parline}
+\newlength{\paroutindent}
+\newlength{\lineheight}
+\setlength{\lineheight}{\heightof{abcdefghijklmnoprstuvwxyz}}
+
+\newcount\shapectr
+\newcommand\myParShape[1]{%
+  \shapectr=0
+  \def\shapeLength{}
+  \loop
+    \ifodd\the\shapectr\edef\shapeLength{\shapeLength 0.05\textwidth 0.95\textwidth}
+    \else\edef\shapeLength{\shapeLength 0.00\textwidth 0.95\textwidth}
+    \fi
+    \advance\shapectr by 1
+    \ifnum\the\shapectr<#1\relax
+  \repeat
+  \expandafter\noindent\parshape\numexpr #1+1\relax  
+  \shapeLength
+  0pt \textwidth%
+}
+
+\newcommand{\zigzagpar}[1]{%
+    \setlength{\paroutindent}{\expandafter\parindent}
+    \setlength{\parline}{\heightof{\noindent\begin{minipage}{\linewidth}%
+                \setlength{\parindent}{\paroutindent}#1\end{minipage}}}%
+    \pgfmathtruncatemacro{\linecount}{round(\parline / (0.9*\lineheight)) + 2}
+    
+    \myParShape{\linecount}
+    {#1} %
+}
