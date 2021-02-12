@@ -7,3 +7,8 @@ Among  the  four  basic  typographic  alignments–flush  left  (ragged  right),
 * Import the package using `\usepackage(zigzag)`
 * Apply the command using `\zigzagpar{paragraph.....}`
 * The usage of this package can be seen in the test file `test.tex` for reference
+
+## Example Usage
+The image shown here is the output of the `test.tex` file.
+
+![ZigZag](https://github.com/ba-lab/zigzag-justify/blob/main/zigzag_paragraph.png)
