@@ -6,4 +6,4 @@ Among  the  four  basic  typographic  alignments–flush  left  (ragged  right),
 * Include the `zigzag.sty` file in your project
 * Import the package using `\usepackage(zigzag)`
 * Apply the command using `\zigzagpar{paragraph.....}`
-* The usage of this package can be see in the test file `test.tex` for reference
+* The usage of this package can be seen in the test file `test.tex` for reference
