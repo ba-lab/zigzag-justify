@@ -8,6 +8,6 @@ When reading a justified paragraph  with  many  lines,  sometimes  we mislocate 
 * Apply the command using `\zigzagpar{paragraph.....}`
 
 ## Example Overleaf Report 
-* An Overleaf project example is ![here](https://www.overleaf.com/read/sqntjzwhrrbs).
+* An Overleaf project example is [here](https://www.overleaf.com/read/sqntjzwhrrbs).
 
 ![ZigZag](https://github.com/ba-lab/zigzag-justify/blob/main/zigzag_paragraph.png)
