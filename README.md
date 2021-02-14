@@ -1,6 +1,6 @@
 # Zigzag Text Alignment
 
-When reading a justified paragraph  with  many  lines,  sometimes  we mislocate  the  next  line and either reread the same line or skip the subsequent line. To address this shortcoming, this work introduces a new zigzag-style typographic alignment. In this zigzag alignment style we propose to maintain the justification but arrange the lines in a zigzag style.
+When reading a justified paragraph  with  many  lines,  sometimes  we mislocate  the  next  line and either reread the same line or skip the subsequent line. To address this shortcoming, this work introduces a new zigzag-style typographic alignment. In this zigzag alignment style we propose to maintain the justification but arrange the lines in a zigzag style. Here's the simple example of this style using our zig-zag package.
 
 ![ZigZag](zigzag_paragraph.png)
 
